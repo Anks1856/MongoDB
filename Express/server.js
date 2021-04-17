@@ -8,12 +8,20 @@ app.get('/',(req , res )=>{
 
 // use postman to get post request
 
-app.post('/register' , [express.json()],(req , res)=>{
-    console.log(req.body);
+app.post('/register' , [express.json()], async (req , res)=>{
+
     let user = new model.User(req.body);
-    console.log(user);
-    res.send('You registred successfully!');
-})
+    let result = await user.save();
+    res.send('You are register successfully!');
+});
+
+app.post('/addStudent' , [express.json()] ,async (req , res)=>{
+
+    let student = new model.Student(req.body);
+    let result = await student.save();
+    res.send('Student added successfully!');
+
+});
 
 
 app.listen(5000 , ()=>{

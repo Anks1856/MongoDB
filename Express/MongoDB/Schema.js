@@ -7,7 +7,33 @@ const LoginSchema = mongoose.Schema({
 
 });
 
-module.exports = {LoginSchema};
+
+const StudentSchema = mongoose.Schema({
+
+  
+    
+    StuName : String ,
+    StuRollNo : Number ,
+    StuAddress : {
+        AddressLine1:String,
+        AddressLine2:String,
+        AddressLine3:String
+    },
+    StuMarks : {
+        Math : Number ,
+        Eng : Number , 
+        Sci : Number , 
+        Total : Number ,
+        Grade : String
+    },
+    Fees : {
+        Amount : Number,
+        PaymentDate : Date,
+        Status : Boolean
+    } 
+})
+
+module.exports = {LoginSchema , StudentSchema};
 
 
 
