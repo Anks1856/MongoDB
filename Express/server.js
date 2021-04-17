@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const model = require('./MongoDB/Models')
+const model = require('./MongoDB/Models');
 
 app.get('/',(req , res )=>{
     res.send('Hello developers!');
