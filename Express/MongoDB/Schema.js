@@ -10,10 +10,9 @@ const LoginSchema = mongoose.Schema({
 
 const StudentSchema = mongoose.Schema({
 
-  
-    
+
     StuName : String ,
-    StuRollNo : Number ,
+    StuRollNo : {type : Number , required : true}, // required field
     StuAddress : {
         AddressLine1:String,
         AddressLine2:String,
