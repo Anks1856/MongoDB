@@ -1,9 +1,9 @@
 # MongoDB
 100 days code challenge
 
-1 ==> How to get one and more field from another collection. 
-2 
-3 .aggregate([
+1) How to get one and more field from another collection. 
+
+==> aggregate([
       {$match: {...query, Status: "Active"}},
       {
         $lookup: {
